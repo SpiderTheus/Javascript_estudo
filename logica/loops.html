@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reitidores</title>
+</head>
+<body>
+    
+
+    <script>
+        let number = prompt("Digite um número:")
+        
+        let int = 0
+        while(int <= 10){
+            document.write(`${number} x ${int} = ${(int * number)} <br>`)
+            int++
+        }
+        document.write("Saiu do loop while <br>")
+
+
+        int = 0
+        do {
+            if(int > 10){
+                alert("indice maior que 10")
+                break
+            }
+            document.write(`${number} x ${int} = ${(int * number)} <br>`)
+            int++
+        } while (int <= 10)
+        
+        document.write("Saiu do loop do while <br>")
+
+
+
+        for(let j = 0; j <= 10; j++){
+            if(j === 5){
+                continue
+            }
+            document.write(`${number} x ${j}  = ${(j * number)} <br>`)
+        }
+        
+        document.write("Saiu do loop for <br>")
+
+    </script>
+</body>
+</html>

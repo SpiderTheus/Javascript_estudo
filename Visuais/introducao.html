@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuais</title>
+
+    <style>
+        .fx6 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam, laboriosam maiores qui sit 
+        laborum dicta incidunt tenetur, expedita deleniti molestiae eveniet placeat sed non dolorum odio, 
+        blanditiis officia rem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam, laboriosam maiores qui sit 
+        laborum dicta incidunt tenetur, expedita deleniti molestiae eveniet placeat sed non dolorum odio, 
+        blanditiis officia rem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam, laboriosam maiores qui sit 
+        laborum dicta incidunt tenetur, expedita deleniti molestiae eveniet placeat sed non dolorum odio, 
+        blanditiis officia rem.</p>
+    <div style="background-color: blueviolet;">ELEMENTO QUALQUER 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, atque quam! Recusandae cumque sequi debitis, voluptatem ar
+    chitecto modi esse incidunt perferendis? Officia consequatur similique perferendis tenetur modi explicabo magni pariatur.</div>
+
+
+    <script>
+        const div = document.querySelector("div")
+
+        div.style.backgroundColor = '#458'
+
+        div.classList.add("fx") // adciona classe sem remover outras
+
+        div.className = "fx6" //obten as clases, adiciona classe removendo as outras
+
+        console.log(getComputedStyle(div).backgroundColor)
+        console.log(div.offsetHeight)
+        console.log(div.offsetWidth)
+        console.log(div.offsetLeft)
+        console.log(div.offsetTop)
+ 
+
+        console.log(div.getBoundingClientRect()) // encontrar as possições
+    </script>
+</body>
+</html>

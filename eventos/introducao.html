@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <div id="s-hero">
+        <button id="btn1">botao 1</button>
+        <button id="btn2">botao 2</button>
+        <button id="btn3">botao 3</button>
+    </div>
+    <hr>
+    <h1>Delegação de Eventos</h1>
+    <div class="container">
+        <button>Butão 1</button>
+        <button>Butão 2</button>
+        <button>Butão 3</button>
+    </div>
+
+    <script>
+        const btn1 = document.getElementById("btn1")
+        const btn2 = document.getElementById("btn2")
+        const btn3 = document.getElementById("btn3")
+        const arr = []
+        const h1 = document.querySelector("h1")
+        const shero = document.getElementById("s-hero")
+
+        function clicar(e){
+            arr.push("butão 2 foi clicado")
+            console.log(e.target)
+        }
+
+
+        btn1.addEventListener("click", function(){
+           h1.innerHTML = "Butão 1, ativado com sucesso";
+           console.log("btn1")
+        
+        })
+
+        btn2.addEventListener("click", clicar)
+
+        btn3.addEventListener("click", (e) => {
+            console.log(e)
+            e.stopPropagation()
+            shero.innerHTML += arr
+            console.log("btn3")
+        })
+
+        shero.addEventListener("click", (e) => {
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log("clicou no container")
+        }, false)
+
+        const container = document.querySelector(".container")
+        const btns = document.querySelectorAll(".container button")
+        
+        container.addEventListener("click", (e) => {
+            /* e.stopPropagation() */
+            
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log(this)
+            console.log("clicou no container 2")
+            if(e.target.nodeName === "BUTTON"){
+               //console.log(e.target)
+            }
+        })
+
+
+    </script>
+</body>
+</html>''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

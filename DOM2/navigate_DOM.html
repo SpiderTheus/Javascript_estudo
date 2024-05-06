@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste DOM</h1>
+
+    <div class="container">
+        <p>teste  1</p>
+        <p>lorem <a href="#"> link </a> sjjsjdlksd</p>
+        <p>teste 2</p>
+   
+
+        <h2>Lista</h2>
+        <ul>
+            <li>item 1</li>
+            <li>item2
+                <ul>
+                    <li>item 2.a</li>
+                    <li>item 2.b</li>
+                    <li>item 2.c</li>
+                    <li>A</li>
+                </ul>
+            </li> 
+            <li>item <a href="#">link</a></li>
+        </ul>
+     </div>
+
+
+
+    <script>
+
+
+        console.log(document.body)
+        console.log(document.body.parentElement)
+        console.log(document.body.parentNode)
+        const html = document.body.parentNode
+
+        console.log(document.body.parentNode === document.body.parentElement)
+
+        console.log(html.parentElement)
+        console.log(html.parentNode)
+
+
+        const h2 = document.querySelector("h2")
+        const h2PreviousSibiling = h2.nextElementSibling
+        h2PreviousSibiling.style.background = "yellow"
+        h2PreviousSibiling.innerHTML += "tururu"
+
+        console.log(h2.previousElementSibling)
+
+        // O childNodes vai mostrar todos os tipos de nós
+        // O children vai mostrar apenas os nós do tipo elemento
+        const link = document.querySelector("a")
+        const list = document.querySelector("ul ul")
+
+        console.log(link)
+
+        console.log(link.parentElement.lastChild)
+        console.log(link.parentElement.lastElementChild)
+
+        console.log(list.lastElementChild.hasChildNodes())
+
+    </script>
+</body>
+</html>
